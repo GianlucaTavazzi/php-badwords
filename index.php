@@ -5,6 +5,7 @@ $censured = $_GET['badword'];
 $partial_string = substr ( $censured , 0 , 3 );
 $sub_censured = '***';
 $final_sentence = str_replace ($partial_string, $sub_censured, $string);
+$plength = strlen ($string);
 
 ?>
 
@@ -19,5 +20,6 @@ $final_sentence = str_replace ($partial_string, $sub_censured, $string);
         <p> <?php echo $censured ?> </p>
         <p> <?php echo $partial_string ?> </p>
         <p> <?php echo $final_sentence ?> </p>
+        <p> <?php echo $plength ?> </p>
     </body>
 </html>
